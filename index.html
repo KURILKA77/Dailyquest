@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#09091b">
+  <title>DailyQuest</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <div class="glow glow-a"></div><div class="glow glow-b"></div>
+  <main class="app">
+    <header class="top">
+      <div class="brand"><div class="logo">DQ<span>⚡</span></div><div><b>DailyQuest</b><small>ТВОЙ ЕЖЕДНЕВНЫЙ ВЫЗОВ</small></div></div>
+      <button class="avatar" id="avatar">👤</button>
+    </header>
+
+    <section class="wallet">
+      <div class="wallet-item"><span>🪙</span><div><small>МОНЕТЫ</small><b id="coins">120</b></div><i>＋</i></div>
+      <div class="wallet-item"><span>💎</span><div><small>КРИСТАЛЛЫ</small><b id="gems">3</b></div><i>＋</i></div>
+    </section>
+
+    <section class="player panel">
+      <div class="player-line"><div><small>ТВОЙ УРОВЕНЬ</small><h2>⭐ Уровень <span id="level">1</span></h2></div><div class="streak">🔥 <b id="streak">1</b><small>ДЕНЬ</small></div></div>
+      <div class="xp-line"><span>Опыт</span><b><span id="xp">35</span> / 100 XP</b></div>
+      <div class="bar"><div id="xpbar" style="width:35%"></div></div>
+    </section>
+
+    <section class="challenge panel">
+      <div class="section-head"><div><small>ИСПЫТАНИЕ ДНЯ</small><h1>Мозговой разгон 🧠</h1></div><span class="tag">НОВОЕ</span></div>
+      <p id="question">Продолжи последовательность: 2, 4, 8, 16, ...</p>
+      <div class="answers" id="answers">
+        <button data-answer="24">24</button><button data-answer="30">30</button>
+        <button data-answer="32">32</button><button data-answer="34">34</button>
+      </div>
+      <div class="reward">Награда за верный ответ: <b>+20 XP</b> <b>+20 🪙</b></div>
+      <p class="feedback" id="feedback" aria-live="polite">Выбери правильный ответ — проверь себя!</p>
+    </section>
+
+    <section class="section-title"><h3>ТВОЙ ПРОГРЕСС</h3><small>Стань легендой DailyQuest</small></section>
+    <section class="tiles">
+      <button class="tile" data-page="profile"><span>👤</span><b>Профиль</b><small>Твои достижения</small></button>
+      <button class="tile" data-page="rating"><span>🏆</span><b>Рейтинг</b><small>Лучшие игроки</small></button>
+      <button class="tile" data-page="shop"><span>🛍️</span><b>Магазин</b><small>Редкие предметы</small></button>
+      <button class="tile" data-page="invite"><span>🤝</span><b>Друзья</b><small>Приглашай и получай</small></button>
+    </section>
+    <nav class="bottom"><button class="active" data-page="home">⌂<small>Главная</small></button><button data-page="play">⚡<small>Играть</small></button><button data-page="rating">🏆<small>Топ</small></button><button data-page="profile">☺<small>Профиль</small></button></nav>
+    <footer>DAILYQUEST · ИГРАЙ ЧЕСТНО, ПОБЕЖДАЙ ДОСТОЙНО</footer>
+  </main>
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
